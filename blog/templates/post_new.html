@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>New post</h1>
+<!--We use the POST method for sending data, we use the GET method to receive data (search bar)-->
+<!--USE THE CSRF_TOKEN TAG FOR ALL FORMS-->
+    <form action="" method="post">{% csrf_token %}
+        <!--Outputs the form data as a paragraph element-->
+        {{ form.as_p }}
+        <!--The value is the name of the input-->
+        <input type="submit" value="Save" />
+    </form>
+{% endblock content %}

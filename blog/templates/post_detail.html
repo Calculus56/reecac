@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="split left">
+    <img alt="An image is supposed to be here. But the developer needs his coffee to work." class="lemur" src="{{ post.img }}"
+         width="322" height="430">
+</div>
+<div class="split right">
+<div class="post-entry">
+    <h2>{{ post.title }}</h2>
+     <p style= "width:20%" class="blog-left">{{ post.body }}</p>
+ </div>
+</div>
+{% if user.is_authenticated %}
+<p><a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a></p>
+<p><a href="{% url 'post_delete' post.pk %}">+ Delete Blog Post</a></p>
+{% endif %}
+{% endblock content %}
