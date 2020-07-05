@@ -1,16 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<div class="split left">
-    <img alt="An image is supposed to be here. But the developer needs his coffee to work." class="lemur" src="{{ post.img }}"
-         width="322" height="430">
+<div class="column-img">
+    <blockquote class="imgur-embed-pub" lang="en" data-id="{{ post.data_id }}"><a href="{{ post.href }}">My Boi</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 </div>
-<div class="split right">
-<div class="post-entry">
-    <h2>{{ post.title }}</h2>
-     <p style= "width:20%" class="blog-left">{{ post.body }}</p>
- </div>
+<div class="column-text">
+    <h2 style="color:white">{{ post.title }}</h2>
+    <p class="body-text">{{ post.body }}</p>
 </div>
 {% if user.is_authenticated %}
 <p><a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a></p>

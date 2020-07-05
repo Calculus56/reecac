@@ -2,36 +2,43 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Teag404 Blog</title>
+    <title>Gradeer</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
-    <link href="{% static 'css/buttonHover.css' %}" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
 </head>
 <body>
 <div>
 <header>
-    <div class="load">
-        <div class="loading">
-            <span>T</span>
-            <span>e</span>
-            <span>a</span>
-            <span>g</span>
-            <span>4</span>
-            <span>0</span>
-            <span>4</span>
-        </div>
-    </div>
-    <div class="nav-right">
-        <a href="{% url 'home' %}">
-            <button>Home</button>
-        </a>
-    </div>
+    <h1 class="title">Gradeer</h1>
+    <br>
+    <p style="text-align: center; color: white;">(Pronounced Gra-deer)</p>
+<!--    <div>-->
+<!--        <a href="{% url 'home' %}">-->
+<!--            <button class="button-column">Home</button>-->
+<!--        </a>-->
+<!--        <button class="button-column">About Us</button>-->
+<!--        <button class="button-column">Privacy Policy</button>-->
+<!--        <button class="button-column">Contact Us</button>-->
+<!--        <button class="button-column">Honorable Mentions</button>-->
+<!--    </div>-->
     <div class="nav-right">
         {% if user.is_authenticated %}
         <a href="{% url 'post_new' %}">+ New Blog Post</a>
         {% endif %}
     </div>
 </header>
+    <div class="main">
+        <div class="nav">
+            <ol>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'home' %}">About Me</a></li>
+                <li><a href="{% url 'home' %}">Privacy Policy</a></li>
+                <li><a href="{% url 'home' %}">Contact Us</a></li>
+                <li><a href="{% url 'home' %}">Team</a></li>
+                <li class="animation"></li>
+            </ol>
+        </div>
+    </div>
     {% if user.is_authenticated %}
     <p><a href="{% url 'logout' %}">Log Out</a></p>
     {% endif %}

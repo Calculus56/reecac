@@ -15,11 +15,27 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from blog.models import Post
+from blog.sitemaps import StaticViewSitemap
+from django.contrib.sitemaps import GenericSitemap # new
+from django.contrib.sitemaps.views import sitemap # new
 # The empty string means URL requests should be redirected to the blog's URLs for further instruction.
+
+
+sitemaps = {
+    'blog': GenericSitemap({
+        'queryset': Post.objects.all()
+    }, priority=0.9),
+    'static': StaticViewSitemap,
+
+}
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('accounts.urls')),
     path('', include('blog.urls')),
+    path('sitemap.xml', sitemap, # new
+         {'sitemaps': sitemaps},
+         name='django.contrib.sitemaps.views.sitemap'),
 ]

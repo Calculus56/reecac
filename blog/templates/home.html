@@ -1,20 +1,34 @@
 {% extends 'base.html' %}
 {% block content %}
+<!--<h1>Intro Video</h1>-->
+<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/F_Gw2dvm14g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+<h1>Newest Post</h1>
+{% for post in object_list reversed %}
+{% if forloop.first %}
 
-<h1>Intro Video</h1>
-<!--{% with '1 2 3' as list %}-->
-<!--{% for i in list.split %}-->
-<!--{{ i }}<br>-->
-<!--{% endfor %}-->
-<!--{% endwith %}-->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F_Gw2dvm14g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="column-img">
+    <blockquote class="imgur-embed-pub" lang="en" data-id="{{ post.data_id }}"><a href="{{ post.href }}">Image</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+</div>
+<div class="column-text">
+    <h2 style="color:white">{{ post.title }}</h2>
+    <p class="body-text">{{ post.body }}</p>
+</div>
+{% endif %}
+{% endfor %}
+<div class="column-text">
 <h1>Blog Posts</h1>
 <!--object_list comes from the ListView in the BlogListView class-->
+
  {% for post in object_list reversed %}
+    {% if forloop.first %}
 <!--get all the objects, it has the attributes of the post model-->
+    {% else %}
   <div class="post-entry">
       <h2 class="blog-left"><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
   </div>
+    {% endif %}
  {% endfor %}
+
+</div>
 {% endblock content %}
 <!--To add static files for in production you need a Content Delivery Network (CDN)-->
