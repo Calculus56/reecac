@@ -1,11 +1,27 @@
 from django.shortcuts import render, HttpResponse
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Post
 from django.urls import reverse_lazy
 
 # Create your views here.
 # You can use the context_object_name to explicitly name your context object.
+
+
+class BlogTeam(TemplateView):
+    template_name = 'navbar/team.html'
+
+
+class BlogPolicy(TemplateView):
+    template_name = 'navbar/policy.html'
+
+
+class BlogContact(TemplateView):
+    template_name = 'navbar/contact.html'
+
+
+class BlogAbout(TemplateView):
+    template_name = 'navbar/about_me.html'
 
 
 class BlogListView(ListView):

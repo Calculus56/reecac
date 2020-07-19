@@ -2,16 +2,20 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Gradeer</title>
+    <title>{% block title %}Reecac - Home{% endblock %}</title>
+    <meta name="description" content="Have you ever been stuck thinking about
+    what to do before graduating high school or college? Well, this blog is a way to either guide or improve you.">
+    <meta name="keywords" content="career, advice, life">
+    <meta name="author" content="Teagan Ramos-Ewing">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/effects.css' %}" rel="stylesheet">
 </head>
 <body>
+
 <div>
 <header>
-    <h1 class="title">Gradeer</h1>
-    <br>
-    <p style="text-align: center; color: white;">(Pronounced Gra-deer)</p>
+    <h1 class="green-neon">Reecac</h1>
 <!--    <div>-->
 <!--        <a href="{% url 'home' %}">-->
 <!--            <button class="button-column">Home</button>-->
@@ -31,10 +35,10 @@
         <div class="nav">
             <ol>
                 <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'home' %}">About Me</a></li>
-                <li><a href="{% url 'home' %}">Privacy Policy</a></li>
-                <li><a href="{% url 'home' %}">Contact Us</a></li>
-                <li><a href="{% url 'home' %}">Team</a></li>
+                <li><a href="{% url 'about' %}">About Me</a></li>
+                <li><a href="{% url 'policy' %}">Privacy Policy</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                <li><a href="{% url 'team' %}">Team</a></li>
                 <li class="animation"></li>
             </ol>
         </div>

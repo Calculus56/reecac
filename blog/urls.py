@@ -5,6 +5,10 @@ from .views import (
     BlogCreateView,
     BlogUpdateView,
     BlogDeleteView,
+    BlogContact,
+    BlogAbout,
+    BlogPolicy,
+    BlogTeam,
 )
 
 # The empty string tells Python to match all values
@@ -14,6 +18,10 @@ urlpatterns = [
     path('post/<int:pk>/edit', BlogUpdateView.as_view(), name='post_edit'),
     path('post/new/', BlogCreateView.as_view(), name='post_new'),
     path('post/<int:pk>/', BlogDetailView.as_view(), name='post_detail'),
+    path('contact', BlogContact.as_view(), name='contact'),
+    path('about', BlogAbout.as_view(), name='about'),
+    path('policy', BlogPolicy.as_view(), name='policy'),
+    path('team', BlogTeam.as_view(), name='team'),
     path('', BlogListView.as_view(), name='home'),
     path('accounts/', include('django.contrib.auth.urls')),
 ]

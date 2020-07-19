@@ -1,0 +1,14 @@
+.about-mid{
+    float:left;
+    width: 50%;
+    padding-right: 25%;
+    padding-left: 25%;
+}
+
+h3{
+    color: white;
+}
+
+p {
+    color: white;
+}
