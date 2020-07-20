@@ -1,0 +1,11 @@
+p{
+    color:white;
+}
+
+li{
+    color:white;
+}
+
+a:link    {color:maroon;}
+a:visited {color:green;}
+a:hover   {color:red;}
