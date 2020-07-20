@@ -1,1 +1,1 @@
-web: gunicorn reecac --log-file -
+web: gunicorn reecac.wsgi --log-file -
