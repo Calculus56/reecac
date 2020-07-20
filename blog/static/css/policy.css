@@ -6,6 +6,6 @@
     color:white;
 }
 
-a:link    {color:maroon;}
-a:visited {color:green;}
-a:hover   {color:red;}
+.pol a:link    {color:maroon;}
+.pol a:visited {color:green;}
+.pol a:hover   {color:red;}
