@@ -1,0 +1,30 @@
+.about-mid{
+    float:left;
+    width: 50%;
+    padding-right: 25%;
+    padding-left: 25%;
+}
+
+h2{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+li {
+    color: white;
+}
+
+.purple-neon {
+  color: #fff;
+  text-shadow:
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 16px #800080,
+    0 0 32px #800080,
+    0 0 42px #800080,
+    0 0 52px #800080,
+    0 0 102px #800080;
+}
