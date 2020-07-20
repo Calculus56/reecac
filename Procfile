@@ -1,1 +1,1 @@
-web: guincorn reecac --log-file -
+web: gunicorn reecac --log-file -
