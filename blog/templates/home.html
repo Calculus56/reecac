@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-<!--<h1>Intro Video</h1>-->
-<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/F_Gw2dvm14g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 <h1 class="blue-neon">Newest Post</h1>
 {% for post in object_list reversed %}
 {% if forloop.first %}
