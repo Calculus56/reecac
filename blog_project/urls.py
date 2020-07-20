@@ -16,7 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from blog.models import Post
-from blog.sitemaps import StaticViewSitemap, StaticViewContact
+from blog.sitemaps import (
+    StaticViewSitemap,
+    StaticViewContact,
+    StaticViewAbout,
+    StaticViewPolicy,
+    StaticViewTeam,
+)
 from django.contrib.sitemaps import GenericSitemap # new
 from django.contrib.sitemaps.views import sitemap # new
 # The empty string means URL requests should be redirected to the blog's URLs for further instruction.
@@ -28,6 +34,9 @@ sitemaps = {
     }, priority=0.9),
     'static': StaticViewSitemap,
     'contacts': StaticViewContact,
+    'about': StaticViewAbout,
+    'policy': StaticViewPolicy,
+    'team': StaticViewTeam,
 }
 
 urlpatterns = [
