@@ -1,11 +1,10 @@
-.pol p{
+div.pol p{
     color:white;
 }
 
-.pol li{
+div.pol li{
     color:white;
 }
-
-.pol a:link    {color:maroon;}
-.pol a:visited {color:green;}
-.pol a:hover   {color:red;}
+div.pol a:link    {color:maroon;}
+div.pol a:visited {color:green;}
+div.pol a:hover   {color:red;}
