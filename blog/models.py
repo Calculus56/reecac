@@ -14,10 +14,6 @@ class Post(models.Model):
     )
     body = models.TextField()
 
-    data_id = models.CharField(max_length=40)
-
-    href = models.CharField(max_length=40)
-
     def __str__(self):
         return self.title
 
