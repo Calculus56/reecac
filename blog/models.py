@@ -14,7 +14,7 @@ class Post(models.Model):
     )
     body = models.TextField()
 
-    img = models.CharField(max_length=40)
+    img = models.CharField(max_length=60)
 
     def __str__(self):
         return self.title
