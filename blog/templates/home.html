@@ -6,7 +6,10 @@
 {% if forloop.first %}
 
 <div class="column-img">
-    <img src="{% static 'img/Beach.PNG' %}"/>
+    {% with 'img/'|add:post.img|add:'.PNG' as image_static %}
+    <p>{{ image_static }}</p>
+<!--    <img src="{% static image_static %}"/>-->
+    {% endwith %}
 </div>
 <div class="column-text">
     <h2 class="blue-neon" style="color:white">{{ post.title }}</h2>
