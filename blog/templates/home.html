@@ -7,7 +7,7 @@
 
 <div class="column-img">
     {% with 'images/'|add:post.img|add:'.png' as image_static %}
-    <img src="{% static image_static %}"/>
+    <img src="{% static 'image/Beach.png' %}"/>
     {% endwith %}
 </div>
 <div class="column-text">
