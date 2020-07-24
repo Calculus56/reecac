@@ -10,14 +10,14 @@ background-image: linear-gradient(315deg, #000000 0%, #414141 74%);}
 }
 
 .column-img {
-    width: 40%;
+  width: 20%;
   float: left;
   padding: 10px;
 }
 
 .column-text {
   float: left;
-  width: 40%;
+  width: 70%;
   padding-left: 20px;
   padding-right: 20px;
 }
