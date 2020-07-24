@@ -2,7 +2,9 @@
 {% load static %}
 {% block content %}
 <div class="column-img">
-    <img src="{% static {{ post.img }} %}"/>
+    {% with 'img/'|add:post.img|add:'.PNG' as image_static %}
+    <img src="{% static image_static %}"/>
+    {% endwith %}
 </div>
 <div class="column-text">
     <h2 style="color:white">{{ post.title }}</h2>
