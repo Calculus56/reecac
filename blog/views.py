@@ -39,13 +39,13 @@ class BlogCreateView(CreateView):
     model = Post
     template_name = 'post_new.html'
     # Specify the fields the user needs to input.
-    fields = ['title', 'author', 'body']
+    fields = ['title', 'author', 'body', 'img']
 
 
 class BlogUpdateView(UpdateView):
     model = Post
     template_name = 'post_edit.html'
-    fields = ['title', 'body']
+    fields = ['title', 'body', 'img']
 
 
 class BlogDeleteView(DeleteView):
