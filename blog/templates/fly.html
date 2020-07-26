@@ -18,15 +18,15 @@
 <body>
 <canvas id="canvas">
 </canvas>
-<div id="scroll">
-<header>
-    <h1 class="green-neon">Reecac</h1>
-    <div class="nav-right">
-        {% if user.is_authenticated %}
-        <a href="{% url 'post_new' %}">+ New Blog Post</a>
-        {% endif %}
-    </div>
-</header>
+<div id="no-scroll">
+    <header>
+        <h1 class="green-neon">Reecac</h1>
+        <div class="nav-right">
+            {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}">+ New Blog Post</a>
+            {% endif %}
+        </div>
+    </header>
 
     <div class="main">
         <div class="nav">
@@ -44,8 +44,8 @@
     <p><a href="{% url 'logout' %}">Log Out</a></p>
     {% endif %}
     <div>
-    {% block content %}
-    {% endblock content %}
+        {% block content %}
+        {% endblock content %}
     </div>
 </div>
 </body>
