@@ -1,30 +1,34 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h1 class="blue-neon">Newest Post</h1>
+<h1 class="blue-neon" style="padding-left:20%;width:40%;padding-right:40%;">
+    Newest Post
+</h1>
 {% for post in object_list reversed %}
 {% if forloop.first %}
 
 <div class="column-img">
     {% with 'img/'|add:post.img|add:'.PNG' as image_static %}
-    <img src="{% static image_static %}"/>
+    <img src="{% static image_static %}" style="max-height:50%,max-width:50%;"/>
     {% endwith %}
 </div>
 <div class="column-text">
-    <h2 class="blue-neon" style="color:white">{{ post.title }}</h2>
+    <h2 class="blue-neon" style="padding-left:20%;width:60%;padding-right:20%;">{{ post.title }}</h2>
     <p class="body-text">{{ post.body }}</p>
 </div>
 {% endif %}
 {% endfor %}
 <div class="column-post">
-<h1 class="blue-neon">Blog Posts</h1>
+<h1 class="blue-neon" style="padding-left:20%;width:40%;padding-right:40%;padding-top:2%;">
+    Old Posts
+</h1>
 <!--object_list comes from the ListView in the BlogListView class-->
 
  {% for post in object_list reversed %}
     {% if forloop.first %}
 <!--get all the objects, it has the attributes of the post model-->
     {% else %}
-  <div class="post-entry">
+  <div class="post-entry" style="padding-left: 20%;width: 40%;padding-right: 40%;padding-top: 20px;">
       <h2 style="font-family:arial" class="blog-left"><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
   </div>
     {% endif %}

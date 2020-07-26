@@ -1,5 +1,6 @@
 /* Ctrl+F5 in the website to bypass the cache (update the changes) */
 body {
+overflow:fixed;
 background-color: #000000;
 background-image: linear-gradient(315deg, #000000 0%, #414141 74%);}
 
@@ -10,21 +11,22 @@ background-image: linear-gradient(315deg, #000000 0%, #414141 74%);}
 }
 
 .column-img {
-  width: 20%;
-  float: left;
-  padding: 10px;
+   vertical-align:middle;
+   text-align:center;
+   width: 100%;
 }
 
 .column-text {
   float: left;
-  width: 70%;
-  padding-left: 20px;
-  padding-right: 20px;
+  text-align:center;
+  width: 60%;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .column-post {
   float: left;
-  padding-left: 20px;
+  width: 100%;
 }
 
 .button-column {
@@ -99,7 +101,7 @@ header .name {
 }
 
 .post-entry h2 a:hover {
-    color: red;
+    color: #B0E0E6;
 }
 
 .blog-left {
@@ -111,6 +113,7 @@ header .name {
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-bottom: 2%;
 }
 
 .nav {
