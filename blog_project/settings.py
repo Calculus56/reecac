@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('KEY_ID')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = [
 #     'localhost',
@@ -168,7 +168,7 @@ SESSION_COOKIE_SECURE = True #to avoid transmitting the session cookie over HTTP
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
 SECURE_HSTS_SECONDS = 86400  # 1 day
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
