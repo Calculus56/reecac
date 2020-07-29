@@ -9,9 +9,13 @@
 <div class="column-text">
     <h2 style="color:white">{{ post.title }}</h2>
     <p class="body-text">{{ post.body }}</p>
+    {% for content in post.content_set.all %}
+        <h2 style="color: white;text-align: left;">{{ content.head }}</h2>
+        <p style="color:white;text-align: left;"> {{ content.body }}</p>
+    {% endfor %}
 </div>
 {% if user.is_authenticated %}
-<p><a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a></p>
+<p><a href="{% url 'post_edit' post.id %}">+ Edit Blog Post</a></p>
 <p><a href="{% url 'post_delete' post.pk %}">+ Delete Blog Post</a></p>
 {% endif %}
 {% endblock content %}

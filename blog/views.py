@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from django.views.generic import ListView, DetailView, TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Post
+from .models import Post, Content
 from django.urls import reverse_lazy
 
 # Create your views here.
@@ -39,13 +39,20 @@ class BlogCreateView(CreateView):
     model = Post
     template_name = 'post_new.html'
     # Specify the fields the user needs to input.
-    fields = ['title', 'author', 'body', 'img']
+    fields = ['title', 'author', 'img']
+
+
+class BlogCreateContent(CreateView):
+    model = Content
+    template_name = 'post_content.html'
+    # Specify the fields the user needs to input.
+    fields = ['head', 'body']
 
 
 class BlogUpdateView(UpdateView):
     model = Post
     template_name = 'post_edit.html'
-    fields = ['title', 'body', 'img']
+    fields = ['title', 'img']
 
 
 class BlogDeleteView(DeleteView):

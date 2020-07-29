@@ -5,7 +5,7 @@
     <title>{% block title %}Reecac{% endblock %}</title>
     <meta name="description" content="Have you ever been stuck thinking about
     what to do before graduating high school or college? Well, this blog is a way to either guide or improve you.">
-    <meta name="keywords" content="career, advice, life">
+    <meta name="keywords" content="career planning before high school, advice in high school, life before college, reecac">
     <meta name="author" content="Teagan Ramos-Ewing">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
@@ -19,35 +19,51 @@
 <body>
 <canvas id="canvas">
 </canvas>
-<div id="scroll">
-<header>
-    <h1 class="green-neon">Reecac</h1>
-    <div class="nav-right">
-        {% if user.is_authenticated %}
-        <a href="{% url 'post_new' %}">+ New Blog Post</a>
-        {% endif %}
-    </div>
-</header>
+<div id="myHeader">
+    <header>
+        <h1 class="green-neon">Reecac</h1>
 
-    <div class="main">
-        <div class="nav">
-            <ol>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'about' %}">About Me</a></li>
-                <li><a href="{% url 'policy' %}">Privacy Policy</a></li>
-                <li><a href="{% url 'contact' %}">Contact Us</a></li>
-                <li><a href="{% url 'team' %}">Team</a></li>
-                <li class="animation"></li>
-            </ol>
+        <div class="main">
+            <div class="nav">
+                <ol>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About Me</a></li>
+                    <li><a href="{% url 'policy' %}">Privacy Policy</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                    <li><a href="{% url 'team' %}">Team</a></li>
+                    <li class="animation"></li>
+                </ol>
+            </div>
         </div>
-    </div>
+    </header>
+
+</div>
+<div id="scroll">
+
+
     {% if user.is_authenticated %}
     <p><a href="{% url 'logout' %}">Log Out</a></p>
+    <a href="{% url 'post_new' %}">+ New Blog Post</a>
     {% endif %}
     <div>
     {% block content %}
     {% endblock content %}
     </div>
+
 </div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 </body>
 </html>

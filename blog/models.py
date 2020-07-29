@@ -12,7 +12,6 @@ class Post(models.Model):
         'auth.User',
         on_delete=models.CASCADE,
     )
-    body = models.TextField()
 
     img = models.CharField(max_length=60)
 
@@ -23,4 +22,13 @@ class Post(models.Model):
         return reverse('post_detail', args=[str(self.id)])
 
 
+class Content(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    head = models.CharField(max_length=200)
+    body = models.TextField()
 
+    def __str__(self):
+        return self.head
+
+    def get_absolute_url(self):
+        return reverse('post_detail', args=[str(self.id)])
