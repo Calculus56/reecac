@@ -156,7 +156,7 @@ header .name {
     justify-content: center;
     align-items: center;
     width: 150px;
-    height: 60px;
+    height: 35px;
     text-decoration: none;
     color: white;
     text-transform: uppercase;
@@ -164,9 +164,9 @@ header .name {
 
 .animation {
     width: 0px;
-    height: 5px;
+    height: 4px;
     position: absolute;
-    top: 0;
+    top: -5;
     left: 0;
     background-color: #00ff00;
     transition: all 0.4s;
