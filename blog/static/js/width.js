@@ -1,6 +1,7 @@
 $( document ).ready(function() {
    function resize(){
    document.documentElement.style.setProperty('--height-var', window.innerHeight+'px');
+   document.documentElement.style.setProperty('--width-var', window.innerWidth+'px');
    }
    window.onorientationchange = function() {
            window.location.reload();
