@@ -21,9 +21,9 @@ urlpatterns = [
     path('post/new/<int:pk>/content/', BlogCreateContent.as_view(), name='post_content'),
     path('post/<int:pk>/', BlogDetailView.as_view(), name='post_detail'),
     path('contact', BlogContact.as_view(), name='contact'),
-    path('about', BlogAbout.as_view(), name='about'),
+    path('chat', BlogAbout.as_view(), name='chat'),
     path('policy', BlogPolicy.as_view(), name='policy'),
-    path('team', BlogTeam.as_view(), name='team'),
+    path('about', BlogTeam.as_view(), name='about'),
     path('', BlogListView.as_view(), name='home'),
     path('accounts/', include('django.contrib.auth.urls')),
 ]

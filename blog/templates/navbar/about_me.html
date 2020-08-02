@@ -1,19 +1,9 @@
-{% extends 'fly.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block title %}Reecac - About Me{% endblock %}
 {% block content %}
 <link href="{% static 'css/about.css' %}" rel="stylesheet">
 <div class="about-mid">
-    <h3>About Me</h3>
-    <p>
-        My name is Teagan, a programmer who failed and kept trying. During my last year of high school, I thought,
-        "Why should I wait to create?" So I researched programming fields, I found many I liked, and some I never wanted
-        to do. The final decision was to pursue web development, so I made this blog.
-    </p>
-    <br>
-    <p>
-        I aim to provide my experience and thoughts on how to turn a passion into a career.
-        And by viewing this blog I hope you will advance earlier than I did.
-    </p>
+    {% include 'public.html' %}
 </div>
 {% endblock content %}

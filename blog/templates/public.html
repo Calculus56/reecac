@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+  <!--<script type='text/javascript' src='http://0.0.0.0:8080/scaledrone.js'></script>-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    html, body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 13px;
+      font-family: Candara;
+	  background-color: #414141;
+    }
+	.chat {
+		margin-left: auto;
+		margin-right: auto;
+		width: 65%
+	}
+    .members-count,
+    .members-list,
+    .messages {
+      border: 2px solid #e4e4e4;
+	  border-radius: 6px;
+      padding: 15px;
+      font-family: Candara;
+      margin-bottom: 15px;
+    }
+
+    .messages {
+      flex-shrink: 1;
+      font-family: Candara;
+      overflow: auto;
+    }
+
+    .message {
+      padding: 5px 0;
+	  color: white;
+      font-family: Candara;
+    }
+    .message .member {
+      display: inline-block;
+      font-family: Candara;
+    }
+
+    .member {
+      padding-right: 10px;
+      font-family: Candara;
+      position: relative;
+    }
+
+    .message-form {
+      display: flex;
+      font-family: Candara;
+      border: 2px solid #e4e4e4;
+	  border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .message-form__input {
+      flex-grow: 1;
+      font-family: Candara;
+      border: 1px solid #dfdfdf;
+      padding: 10px 15px;
+      font-size: 16px;
+	  background-color: #414141;
+	  color: white;
+    }
+  </style>
+</head>
+<body>
+<div class="chat">
+  <div class="members-list">-</div>
+  <div class="messages"></div>
+  <form class="message-form" onsubmit="return false;">
+    {% csrf_token %}
+    <input class="message-form__input" placeholder="Type your message and press enter." type="text"/>
+  </form>
+</div>
+  <script src="{% static 'js/public.js' %}"></script>
+</body>
+
+</html>

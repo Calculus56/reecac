@@ -1,7 +1,7 @@
 $( document ).ready(function() {
   let c = init("canvas"),
-    w = (canvas.width = document.querySelector('body').clientWidth),
-    h = (canvas.height = document.querySelector('body').clientHeight);
+    w = (canvas.width = window.innerWidth),
+    h = (canvas.height = window.innerHeight);
   //initiation
 
   class firefly{
@@ -92,7 +92,9 @@ $( document ).ready(function() {
     (h = canvas.height = window.innerHeight);
     loop();
   });
-
+    window.onorientationchange = function() {
+               window.location.reload();
+           };
   loop();
   setInterval(loop, 1000 / 60);
 });

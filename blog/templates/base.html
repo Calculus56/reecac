@@ -27,10 +27,10 @@
             <div class="nav">
                 <ol>
                     <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'about' %}">About Me</a></li>
+                    <li><a href="{% url 'chat' %}">Public Chat</a></li>
                     <li><a href="{% url 'policy' %}">Privacy Policy</a></li>
                     <li><a href="{% url 'contact' %}">Contact Us</a></li>
-                    <li><a href="{% url 'team' %}">Team</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
                     <li class="animation"></li>
                 </ol>
             </div>
@@ -38,7 +38,7 @@
     </header>
 
 </div>
-<div id="scroll">
+<div class="scroll" id="style-1">
 
 
     {% if user.is_authenticated %}

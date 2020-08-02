@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="column-img">
+<div class="column-img" style="margin-top: 3%;">
     {% with 'img/'|add:post.img|add:'.PNG' as image_static %}
-    <img src="{% static image_static %}"/>
+    <img src="{% static image_static %}" style="width:100%;"/>
     {% endwith %}
 </div>
 <div class="column-text">

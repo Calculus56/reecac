@@ -2,6 +2,13 @@ div.pol p{
     color:white;
 }
 
+#priv-mid {
+    float: left;
+    width: 60%;
+    padding-right: 20%;
+    padding-left: 20%;
+}
+
 div.pol li{
     color:white;
 }
