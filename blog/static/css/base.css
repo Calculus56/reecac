@@ -98,7 +98,7 @@ header .name {
 }
 
 .post-entry {
-    margin-bottom: 2rem;
+    margin-bottom: -1.5rem;
 }
 /* .post-entry is the class that we are calling in home.html */
 .post-entry h2 {
