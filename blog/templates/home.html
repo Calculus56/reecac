@@ -35,7 +35,7 @@
     {% if forloop.first %}
 <!--get all the objects, it has the attributes of the post model-->
     {% else %}
-  <div class="post-entry" style="padding-left: 20%;width: 40%;padding-right: 40%;padding-top: 20px;">
+  <div class="post-entry" style="padding-left: 20%;width: 40%;padding-right: 40%;">
       <h2 class="blog-left"><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
   </div>
     {% endif %}
