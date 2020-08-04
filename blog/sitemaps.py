@@ -40,7 +40,7 @@ class StaticViewTeam(Sitemap):
     priority = 0.6
 
     def items(self):
-        return ['team']
+        return ['chat']
 
     def location(self, item):
         return reverse(item)
